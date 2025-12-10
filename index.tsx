@@ -375,10 +375,16 @@ document.addEventListener('DOMContentLoaded', () => {
         const emailInput = contactForm?.elements.namedItem('email') as HTMLInputElement;
         const phoneInput = contactForm?.elements.namedItem('phone') as HTMLInputElement;
 
-        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-        if (emailInput && !emailRegex.test(emailInput.value)) {
-            showError(emailInput, 'Por favor, insira um e-mail válido.');
-            isValid = false;
+        // More robust email validation regex
+        // Validates: local-part@domain.tld
+        // Allows: letters, numbers, dots, hyphens, underscores, plus signs in local part
+        // Requires: @ symbol, domain name, and at least one dot with TLD
+        const emailRegex = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        if (emailInput && emailInput.value.trim()) {
+            if (!emailRegex.test(emailInput.value.trim())) {
+                showError(emailInput, 'Por favor, insira um e-mail válido (exemplo: nome@dominio.com).');
+                isValid = false;
+            }
         }
 
         const phoneDigits = phoneInput?.value.replace(/\D/g, '');
@@ -427,6 +433,61 @@ document.addEventListener('DOMContentLoaded', () => {
             clearError(input as HTMLInputElement | HTMLSelectElement);
         });
     });
+
+    // Real-time email validation with visual feedback
+    const emailInput = contactForm?.elements.namedItem('email') as HTMLInputElement;
+    let emailValidationTimeout: number;
+
+    const validateEmailRealtime = (input: HTMLInputElement) => {
+        const emailRegex = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+        const value = input.value.trim();
+
+        // Clear previous timeout
+        if (emailValidationTimeout) {
+            clearTimeout(emailValidationTimeout);
+        }
+
+        // Clear any existing validation state first
+        clearError(input);
+        input.classList.remove('valid');
+
+        // Only validate if there's content
+        if (value.length > 0) {
+            // Debounce validation by 500ms
+            emailValidationTimeout = window.setTimeout(() => {
+                if (emailRegex.test(value)) {
+                    // Valid email - add success state
+                    input.classList.add('valid');
+                    clearError(input);
+                } else {
+                    // Invalid email - show error
+                    showError(input, 'Por favor, insira um e-mail válido (exemplo: nome@dominio.com).');
+                }
+            }, 500);
+        }
+    };
+
+    emailInput?.addEventListener('input', (e) => {
+        validateEmailRealtime(e.target as HTMLInputElement);
+    });
+
+    // Also validate on blur (when user leaves the field)
+    emailInput?.addEventListener('blur', (e) => {
+        const input = e.target as HTMLInputElement;
+        const value = input.value.trim();
+        const emailRegex = /^[a-zA-Z0-9._+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+        if (value.length > 0) {
+            if (emailRegex.test(value)) {
+                input.classList.add('valid');
+                clearError(input);
+            } else {
+                input.classList.remove('valid');
+                showError(input, 'Por favor, insira um e-mail válido (exemplo: nome@dominio.com).');
+            }
+        }
+    });
+
 
 
     // --- Global Modal Triggers ---
