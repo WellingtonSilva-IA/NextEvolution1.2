@@ -11,27 +11,102 @@
         content="Agentes de IA, Automação Inteligente, Next Evolution, Inteligência Artificial, Automação de Processos, Produtividade, Consultoria IA">
     <meta name="robots" content="index, follow">
     <meta name="author" content="Next Evolution">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://nextevolution.ia.br">
+    <meta property="og:title" content="Next Evolution - Agentes de IA e Automação Inteligente">
+    <meta property="og:description"
+        content="Especialistas na criação de agentes de IA personalizados para automatizar processos, aumentar a produtividade e impulsionar resultados excepcionais para o seu negócio.">
+    <meta property="og:image" content="https://nextevolution.ia.br/favicon.svg">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:site_name" content="Next Evolution">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://nextevolution.ia.br">
+    <meta name="twitter:title" content="Next Evolution - Agentes de IA e Automação Inteligente">
+    <meta name="twitter:description"
+        content="Especialistas na criação de agentes de IA personalizados para automatizar processos, aumentar a produtividade e impulsionar resultados excepcionais para o seu negócio.">
+    <meta name="twitter:image" content="https://nextevolution.ia.br/favicon.svg">
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://nextevolution.ia.br">
+
     <link id="favicon" rel="icon" href="favicon.svg" type="image/svg+xml">
 
+    <!-- CSS Inline Crítico para Prevenir CLS -->
+    <style>
+        /* Fallback de fonte para prevenir CLS */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* Depois que Poppins carregar, aplica */
+        .fonts-loaded body {
+            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* Evitar reflow de dimensões */
+        .value-prop {
+            min-height: 400px;
+        }
+    </style>
+
+    <!-- Preload Fontes Críticas -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=optional"
+        as="style">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-    <script type="importmap">
-{
-  "imports": {
-    "vite": "https://aistudiocdn.com/vite@^7.1.5"
-  }
-}
-</script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=optional" rel="stylesheet"
+        media="print" onload="this.media='all';document.body.classList.add('fonts-loaded')">
+    <noscript>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=optional"
+            rel="stylesheet">
+    </noscript>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Next Evolution",
+      "description": "Especialistas na criação de agentes de IA personalizados",
+      "url": "https://nextevolution.ia.br",
+      "logo": "https://nextevolution.ia.br/favicon.svg",
+      "foundingDate": "2025",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+55-19-3199-2624",
+        "contactType": "Sales",
+        "email": "comercial@nextevolution.ia.br",
+        "availableLanguage": ["Portuguese"]
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "BR",
+        "addressLocality": "Campinas",
+        "addressRegion": "SP"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/nextevolution",
+        "https://www.instagram.com/nextevolutionoficial"
+      ]
+    }
+    </script>
+
 </head>
 
 <body>
+
+    <!-- Skip Link para Acessibilidade -->
+    <a href="#main-content" class="skip-link">Pular para o conteúdo principal</a>
 
     <header class="header">
         <div class="container">
             <nav class="navbar">
                 <a href="#hero" class="logo">
-                    <img src="data:image/svg+xml,%3Csvg height='40' viewBox='0 0 280 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad-ne' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2300BFA6'/%3E%3Cstop offset='1' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 0 V36 H8 L22 0 H30 V36 H22 L8 0 H0Z' fill='url(%23grad-ne)'/%3E%3Cpath d='M35 0 V36 H60 V28 H43 V22 H58 V14 H43 V8 H60 V0 H35Z' fill='url(%23grad-ne)'/%3E%3Ctext fill='%23FFFFFF' font-family='Poppins, sans-serif' font-size='24' font-weight='700' x='75' y='28'%3ENext Evolution%3C/text%3E%3C/svg%3E"
+                    <img src="data:image/svg+xml,%3Csvg height='40' viewBox='0 0 280 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad-ne' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2300BFA6'/%3E%3Cstop offset='1' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 0 V36 H8 L22 0 H30 V36 H22 L8 0 H0Z' fill='url(%23grad-ne)'/%3E%3Cpath d='M35 0 V36 H60 V28 H43 V22 H58 V14 H43 V8 H60 V0 H35Z' fill='url(%23grad-ne)'/%3E%3Ctext fill='%231F2937' font-family='Poppins, sans-serif' font-size='24' font-weight='700' x='75' y='28'%3ENext Evolution%3C/text%3E%3C/svg%3E"
                         alt="Next Evolution Logo" class="logo-icon">
                 </a>
 
@@ -40,7 +115,7 @@
                         <li><a href="#hero">Início</a></li>
                         <li><a href="#mission">Missão & Visão</a></li>
                         <li><a href="#services">Nossos Serviços</a></li>
-                        <li><a href="#cases">Cases</a></li>
+
                     </ul>
                     <div class="nav-actions">
                         <a href="https://www.linkedin.com/company/nextevolution" target="_blank"
@@ -69,7 +144,7 @@
         </div>
     </header>
 
-    <main>
+    <main id="main-content">
         <section id="hero" class="hero">
             <div class="container">
                 <div class="hero-content">
@@ -86,6 +161,26 @@
             </div>
         </section>
 
+        <!-- Seção de Métricas (Social Proof) -->
+        <section class="metrics-section">
+            <div class="container">
+                <div class="metrics-grid">
+                    <div class="metric-item glass-card">
+                        <span class="metric-number" data-target="50">0</span>
+                        <span class="metric-label">Agentes Criados</span>
+                    </div>
+                    <div class="metric-item glass-card">
+                        <span class="metric-number" data-target="30">0</span><span class="metric-symbol">%</span>
+                        <span class="metric-label">Aumento de Produtividade</span>
+                    </div>
+                    <div class="metric-item glass-card">
+                        <span class="metric-number" data-target="24">0</span><span class="metric-symbol">/7</span>
+                        <span class="metric-label">Disponibilidade</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <section id="value-prop" class="value-prop">
             <div class="container">
                 <div class="section-header">
@@ -94,7 +189,7 @@
                         crescimento.</p>
                 </div>
                 <div class="value-prop-grid">
-                    <div class="value-prop-card">
+                    <div class="value-prop-card glass-card">
                         <div class="value-prop-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -112,7 +207,7 @@
                         <p>Desenvolvemos agentes de IA únicos, alinhados precisamente com os desafios e objetivos do seu
                             negócio.</p>
                     </div>
-                    <div class="value-prop-card">
+                    <div class="value-prop-card glass-card">
                         <div class="value-prop-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -123,7 +218,7 @@
                         <p>Automatize tarefas repetitivas, libere sua equipe para focar no que é estratégico e veja sua
                             produtividade decolar.</p>
                     </div>
-                    <div class="value-prop-card">
+                    <div class="value-prop-card glass-card">
                         <div class="value-prop-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -134,7 +229,7 @@
                         <p>Acesse o que há de mais moderno em tecnologia de IA, mantendo sua empresa sempre à frente da
                             concorrência.</p>
                     </div>
-                    <div class="value-prop-card">
+                    <div class="value-prop-card glass-card">
                         <div class="value-prop-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -148,7 +243,6 @@
                             retorno sobre o investimento.</p>
                     </div>
                 </div>
-            </div>
         </section>
 
         <section id="mission">
@@ -251,7 +345,7 @@
                         como sua empresa opera e compete no mercado.</p>
                 </div>
                 <div class="services-grid">
-                    <div class="service-card">
+                    <div class="service-card glass-card">
                         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -262,7 +356,7 @@
                         <p>Criamos agentes inteligentes personalizados para automatizar processos específicos do seu
                             negócio.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card glass-card">
                         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -277,7 +371,7 @@
                         <p>Implementamos soluções de automação que aprendem e se adaptam às necessidades da sua empresa.
                         </p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card glass-card">
                         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -288,7 +382,7 @@
                         <p>Analisamos seu negócio e identificamos oportunidades para implementação de IA de forma
                             eficiente.</p>
                     </div>
-                    <div class="service-card">
+                    <div class="service-card glass-card">
                         <div class="service-icon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round">
@@ -302,107 +396,7 @@
             </div>
         </section>
 
-        <section id="cases" class="cases">
-            <div class="container">
-                <div class="section-header">
-                    <h2>Cases de uso por Setor</h2>
-                    <p>Veja como nossos agentes de IA podem ser aplicados em diferentes nichos de mercado para otimizar
-                        operações e melhorar a experiência do cliente.</p>
-                </div>
-                <div class="cases-grid">
-                    <div class="case-card">
-                        <div class="case-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 16l3-8 3 8c-2 1-4 1-6 0z" />
-                                <path d="M2 16l3-8 3 8c-2 1-4 1-6 0z" />
-                                <path d="M12 2v20" />
-                                <path d="M12 6h10" />
-                                <path d="M12 6H2" />
-                            </svg></div>
-                        <h3>Advocacia Digital</h3>
-                        <ul>
-                            <li><b>Atendimento inicial:</b> chatbot para responder dúvidas comuns de clientes.</li>
-                            <li><b>Escritórios:</b> organização automática de prazos em agenda.</li>
-                            <li><b>Documentos:</b> geração de minutas ou contratos simples.</li>
-                        </ul>
-                    </div>
-                    <div class="case-card">
-                        <div class="case-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                                <polyline points="9 22 9 12 15 12 15 22" />
-                            </svg></div>
-                        <h3>Mercado Imobiliário Inteligente</h3>
-                        <ul>
-                            <li><b>Corretores:</b> resposta automática a interessados em anúncios.</li>
-                            <li><b>Imobiliárias:</b> agendamento de visitas sem intervenção humana.</li>
-                            <li><b>Clientes:</b> comparador rápido de valores de imóveis semelhantes.</li>
-                        </ul>
-                    </div>
-                    <div class="case-card">
-                        <div class="case-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
-                                <circle cx="9" cy="7" r="4" />
-                                <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
-                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-                            </svg></div>
-                        <h3>RH & Recrutamento Inteligente</h3>
-                        <ul>
-                            <li><b>Seleção:</b> triagem automática de currículos.</li>
-                            <li><b>Entrevistas:</b> chatbot para perguntas iniciais aos candidatos.</li>
-                            <li><b>Onboarding:</b> lembrete de treinamentos e tarefas para novos colaboradores.</li>
-                        </ul>
-                    </div>
-                    <div class="case-card">
-                        <div class="case-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <circle cx="9" cy="21" r="1" />
-                                <circle cx="20" cy="21" r="1" />
-                                <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6" />
-                            </svg></div>
-                        <h3>E-commerce & Varejo Otimizado</h3>
-                        <ul>
-                            <li><b>Atendimento ao cliente:</b> chatbot para suporte 24/7.</li>
-                            <li><b>Recomendações:</b> sugestões personalizadas de produtos.</li>
-                            <li><b>Logística:</b> automação do rastreamento de pedidos e gestão de estoque.</li>
-                        </ul>
-                    </div>
-                    <div class="case-card">
-                        <div class="case-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M12 5v14" />
-                                <path d="M5 12h14" />
-                            </svg></div>
-                        <h3>Saúde & Clínicas Otimizadas</h3>
-                        <ul>
-                            <li><b>Triagem inicial:</b> chatbot para coletar sintomas e direcionar pacientes.</li>
-                            <li><b>Agendamentos:</b> confirmação e reagendamento automático de consultas.</li>
-                            <li><b>Pós-consulta:</b> envio automatizado de orientações e lembretes.</li>
-                        </ul>
-                    </div>
-                    <div class="case-card">
-                        <div class="case-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
-                            </svg></div>
-                        <h3>Educação & Treinamento Personalizado</h3>
-                        <ul>
-                            <li><b>Tutoria virtual:</b> assistentes de IA para tirar dúvidas de alunos 24/7.</li>
-                            <li><b>Gestão de cursos:</b> automação de matrículas e comunicação com alunos.</li>
-                            <li><b>Conteúdo adaptativo:</b> criação de trilhas de aprendizado personalizadas.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
+
 
     </main>
 
@@ -411,7 +405,7 @@
             <div class="footer-container">
                 <div class="footer-about">
                     <a href="#hero" class="logo">
-                        <img src="data:image/svg+xml,%3Csvg height='40' viewBox='0 0 280 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad-ne' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2300BFA6'/%3E%3Cstop offset='1' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 0 V36 H8 L22 0 H30 V36 H22 L8 0 H0Z' fill='url(%23grad-ne)'/%3E%3Cpath d='M35 0 V36 H60 V28 H43 V22 H58 V14 H43 V8 H60 V0 H35Z' fill='url(%23grad-ne)'/%3E%3Ctext fill='%23FFFFFF' font-family='Poppins, sans-serif' font-size='24' font-weight='700' x='75' y='28'%3ENext Evolution%3C/text%3E%3C/svg%3E"
+                        <img src="data:image/svg+xml,%3Csvg height='40' viewBox='0 0 280 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cdefs%3E%3ClinearGradient id='grad-ne' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop stop-color='%2300BFA6'/%3E%3Cstop offset='1' stop-color='%232563EB'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cpath d='M0 0 V36 H8 L22 0 H30 V36 H22 L8 0 H0Z' fill='url(%23grad-ne)'/%3E%3Cpath d='M35 0 V36 H60 V28 H43 V22 H58 V14 H43 V8 H60 V0 H35Z' fill='url(%23grad-ne)'/%3E%3Ctext fill='%231F2937' font-family='Poppins, sans-serif' font-size='24' font-weight='700' x='75' y='28'%3ENext Evolution%3C/text%3E%3C/svg%3E"
                             alt="Next Evolution Logo" class="logo-icon">
                     </a>
                     <p>Potencializando negócios com automação e agentes de IA de última geração.</p>
@@ -438,7 +432,7 @@
                         <li><a href="#hero">Início</a></li>
                         <li><a href="#mission">Missão & Visão</a></li>
                         <li><a href="#services">Nossos Serviços</a></li>
-                        <li><a href="#cases">Cases</a></li>
+
                     </ul>
                 </div>
                 <div class="footer-links">
@@ -469,7 +463,7 @@
                                 stroke-linejoin="round">
                                 <rect x="2" y="4" width="20" height="16" rx="2" />
                                 <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                            </svg> <a href="mailto:comercial@nextevolution.com.br">comercial@nextevolution.com.br</a>
+                            </svg> <a href="mailto:comercial@nextevolution.ia.br">comercial@nextevolution.ia.br</a>
                         </li>
                     </ul>
                 </div>

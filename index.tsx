@@ -97,6 +97,27 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
+    // --- Lazy Loading de Background Images ---
+    const lazyBackgrounds = document.querySelectorAll<HTMLElement>('.hero, .why-us');
+
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const target = entry.target as HTMLElement;
+                    target.classList.add('loaded');
+                    imageObserver.unobserve(target);
+                }
+            });
+        }, {
+            rootMargin: '50px' // Começar a carregar 50px antes de aparecer
+        });
+
+        lazyBackgrounds.forEach(bg => imageObserver.observe(bg));
+    } else {
+        // Fallback para navegadores antigos
+        lazyBackgrounds.forEach(bg => bg.classList.add('loaded'));
+    }
 
     // --- Mobile Dropdown Menu ---
     document.querySelectorAll('.nav-item-dropdown > a').forEach(dropdownToggle => {
@@ -435,37 +456,31 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // --- Smooth Scrolling for Anchor Links ---
+    // Smooth scrolling for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (this: HTMLAnchorElement, e: MouseEvent) {
-            // Exclude modal triggers from this custom scrolling logic
-            if (this.dataset.modalTrigger) {
-                return;
-            }
+        anchor.addEventListener('click', function (this: HTMLAnchorElement, e: Event) {
+            e.preventDefault();
+            const targetId = this.getAttribute('href')?.substring(1);
+            if (!targetId) return;
 
-            // Exclude dropdown toggle on mobile from scrolling
-            if (window.innerWidth <= 992 && this.parentElement?.classList.contains('nav-item-dropdown')) {
-                return;
-            }
+            const targetElement = document.getElementById(targetId);
+            if (targetElement) {
+                // Close mobile menu if open
+                const navMenu = document.getElementById('nav-menu');
+                const hamburger = document.querySelector('.hamburger');
 
-            e.preventDefault(); // Prevent default anchor behavior
+                navMenu?.classList.remove('active');
+                hamburger?.setAttribute('aria-expanded', 'false');
+                document.body.classList.remove('no-scroll');
 
-            const href = this.getAttribute('href');
+                const headerOffset = 80;
+                const elementPosition = targetElement.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
 
-            // Special case for scrolling to the very top
-            if (!href || href === '#' || href === '#hero') {
                 window.scrollTo({
-                    top: 0,
+                    top: offsetPosition,
                     behavior: 'smooth'
                 });
-                return;
-            }
-
-            // For all other sections
-            const targetElement = document.querySelector<HTMLElement>(href);
-            if (targetElement) {
-                // The CSS 'scroll-padding-top' is respected by scrollIntoView,
-                // ensuring the section is not hidden behind the fixed header.
                 targetElement.scrollIntoView({
                     behavior: 'smooth',
                     block: 'start'
