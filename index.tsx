@@ -202,7 +202,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h4>Seus Direitos</h4>
                 <p>Você tem o direito de solicitar acesso, correção, exclusão ou portabilidade dos seus dados. Também pode retirar o consentimento ou opor-se ao processamento a qualquer momento.</p>
                 <h4>Contato do DPO</h4>
-                <p>Para exercer seus direitos ou para quaisquer dúvidas relacionadas à proteção de seus dados, entre em contato com nosso Encarregado de Proteção de Dados (DPO) através do e-mail: dpo@nextevolution.com.br</p>`
+                <p>Para exercer seus direitos ou para quaisquer dúvidas relacionadas à proteção de seus dados, entre em contato com nosso Encarregado de Proteção de Dados (DPO) através do e-mail: dpo@nextevolution.ia.br</p>`
         }
     };
 
