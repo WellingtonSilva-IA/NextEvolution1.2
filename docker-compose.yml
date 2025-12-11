@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   nextevolution-app:
-    image: nextevolution:1.1 # Mantenha a versão da sua imagem aqui
+    image: nextevolution:1.2 # Mantenha a versão da sua imagem aqui
     networks:
       - network_public # IMPORTANTE: Verifique se este é o nome correto da sua rede Traefik
 

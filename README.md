@@ -14,8 +14,8 @@ Para rodar o projeto em sua máquina local para desenvolvimento, siga os passos 
 
 2.  **Clone o repositório**:
     ```bash
-    git clone https://github.com/seu-usuario/nextevolution.git
-    cd nextevolution
+    git clone https://github.com/WellingtonSilva-IA/NextEvolution1.2.git
+    cd NextEvolution1.2
     ```
 
 3.  **Instale as dependências**:
@@ -52,8 +52,8 @@ Antes de começar, certifique-se de que seu ambiente na VPS (Hetzner, etc.) aten
 
 1.  **Clone o repositório** na sua VPS:
     ```bash
-    git clone https://github.com/seu-usuario/nextevolution.git
-    cd nextevolution
+    git clone https://github.com/WellingtonSilva-IA/NextEvolution1.2.git
+    cd NextEvolution1.2
     ```
 2.  **Crie o `Dockerfile`**:
     Crie um arquivo chamado `Dockerfile` (sem extensão) na raiz do projeto e adicione o seguinte conteúdo. Ele usa um *multi-stage build* para criar uma imagem otimizada.
@@ -93,12 +93,12 @@ Agora que o `Dockerfile` existe, você pode construir a imagem. É uma boa prát
 
 ```bash
 # O -t define o nome e a tag da imagem (nome:tag)
-docker build -t nextevolution:1.1 .
+docker build -t nextevolution:1.2 .
 ```
 
 #### Passo 3: Implante o "Stack"
 
-Com a imagem `nextevolution:1.1` criada localmente na sua VPS, podemos implantar o stack.
+Com a imagem `nextevolution:1.2` criada localmente na sua VPS, podemos implantar o stack.
 
 ```bash
 docker stack deploy -c docker-compose.yml nextevolution
@@ -115,14 +115,14 @@ Para implantar uma nova versão do código, o fluxo é:
 
 ```bash
 # 1. Na sua VPS, vá para a pasta do projeto e puxe as alterações
-cd /caminho/para/nextevolution
+cd /caminho/para/NextEvolution1.2
 git pull
     
 # 2. Reconstrua a imagem com uma nova tag de versão
 docker build -t nextevolution:1.2 .
     
 # 3. ATENÇÃO: Edite o arquivo docker-compose.yml e atualize a tag da imagem
-# Troque 'image: nextevolution:1.1' para 'image: nextevolution:1.2'
+# Troque 'image: nextevolution:1.2' para 'image: nextevolution:1.3'
 nano docker-compose.yml
     
 # 4. Execute o deploy novamente para que o Swarm atualize o serviço
