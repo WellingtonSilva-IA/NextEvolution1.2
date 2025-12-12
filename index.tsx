@@ -47,55 +47,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // --- Dynamic Favicon ---
-    const faviconLink = document.getElementById('favicon');
+    // Removed: Using static favicon.svg
 
-    if (faviconLink) {
-        const canvas = document.createElement('canvas');
-        canvas.width = 32;
-        canvas.height = 32;
-        const ctx = canvas.getContext('2d');
-
-        if (ctx) {
-            let angle = 0;
-            const primaryGreen = '#00bfa6';
-            const primaryBlue = '#2563eb';
-
-            const drawFavicon = () => {
-                // Clear canvas
-                ctx.clearRect(0, 0, 32, 32);
-
-                // Set font styles
-                ctx.font = 'bold 24px Poppins';
-                ctx.textAlign = 'center';
-                ctx.textBaseline = 'middle';
-
-                // Create rotating gradient
-                const x0 = 16 + Math.cos(angle) * 16;
-                const y0 = 16 + Math.sin(angle) * 16;
-                const x1 = 16 - Math.cos(angle) * 16;
-                const y1 = 16 - Math.sin(angle) * 16;
-                const gradient = ctx.createLinearGradient(x0, y0, x1, y1);
-                gradient.addColorStop(0, primaryGreen);
-                gradient.addColorStop(1, primaryBlue);
-
-                // Apply gradient and draw text
-                ctx.fillStyle = gradient;
-                ctx.fillText('NE', 16, 17); // Y-axis adjusted for better visual centering
-
-                // Update angle for the next frame
-                angle += 0.03;
-
-                // Update favicon href with the new canvas data
-                faviconLink.setAttribute('href', canvas.toDataURL('image/png'));
-
-                // Loop the animation
-                requestAnimationFrame(drawFavicon);
-            };
-
-            // Start the animation
-            drawFavicon();
-        }
-    }
 
     // --- Lazy Loading de Background Images ---
     const lazyBackgrounds = document.querySelectorAll<HTMLElement>('.hero, .why-us');
